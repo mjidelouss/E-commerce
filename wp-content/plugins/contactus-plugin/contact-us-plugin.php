@@ -52,27 +52,26 @@ add_action( 'admin_menu', 'contact_us_plugin_menu' );
 function contact_us_plugin_settings_page() {
     ?>
     <div class="wrap">
-        <h1>Contact Us Plugin</h1>
-        <p>A simple contact us plugin for WordPress.</p>
+        <p>Message Bonzai Store :</p>
         <form method="post" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>">
             <input type="hidden" name="action" value="contact_us_plugin_submit" />
             <div>
                 <label for="name">Name:</label>
-                <input type="text" name="name" pattern="^[a-zA-Z\s]+$" required />
+                <input class="ms-3" type="text" name="name" pattern="^[a-zA-Z\s]+$" required />
             </div>
-            <div>
+            <div class="mt-3">
                 <label for="email">Email:</label>
-                <input type="email" name="email" required />
+                <input style="margin-left: 1.3rem;" type="email" name="email" required />
             </div>
-            <div>
+            <div class="mt-3">
                 <label for="subject">Subject:</label>
-                <input type="text" name="subject" pattern="^[a-zA-Z0-9\s]+$" required />
+                <input class="ms-1" type="text" name="subject" pattern="^[a-zA-Z0-9\s]+$" required />
             </div>
-            <div>
+            <div class="mt-3">
                 <label for="message">Message:</label>
-                <textarea name="message" required></textarea>
+                <textarea class="mt-2" name="message" required></textarea>
             </div>
-            <input type="submit" value="Send" />
+            <input class="mt-3" type="submit" value="Send" />
         </form>
     </div>
     <?php
